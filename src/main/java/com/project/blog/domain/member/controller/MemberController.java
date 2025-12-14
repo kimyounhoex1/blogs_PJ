@@ -5,11 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@GetMapping
-public class BlogApplication {
+@Controller
+public class MemberController {
 
 	@GetMapping("/")
     public String hello() {
-        return "Hello World..";
+        return "hello";
     }
 }
