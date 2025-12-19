@@ -22,13 +22,13 @@ public class User {
     private String loginId;
 
     @Column(nullable = false)
-    private String password;
+    private String loginPassword;
 
     protected User() {}
 
-    public User(String loginId, String password) {
+    public User(String loginId, String loginPassword) {
         this.loginId = loginId;
-        this.password = password;
+        this.loginPassword = loginPassword;
     }
 
 }

@@ -20,7 +20,7 @@ public class AuthService {
 
         // String encodedPassword = passwordEncoder.encode(request.getPassword());
 
-        User user = new User(request.getLoginId(), request.getPassword());
+        User user = new User(request.getLoginId(), request.getLoginPassword());
         userRepository.save(user);
     }
 
@@ -28,7 +28,7 @@ public class AuthService {
         User user = userRepository.findByLoginId(request.getLoginId()).
         orElseThrow(() -> new IllegalArgumentException("아이디 없음"));
 
-        if(!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
+        if(!passwordEncoder.matches(request.getLoginPassword(), user.getLoginPassword())) {
             new IllegalArgumentException("비밀번호 틀림");
         }
     }
