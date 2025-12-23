@@ -28,7 +28,6 @@ public class User {
 
     public User(String loginId, String loginPassword) {
         this.loginId = loginId;
-        this.loginPassword = loginPassword;
+        this.loginPassword = loginPassword; 
     }
-
 }
